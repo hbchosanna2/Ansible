@@ -3,7 +3,7 @@
   become: yes
   gather_facts: false
   tasks:
-    - name: Install application tree
+    - name: Ansible play for vars
       yum:
         name: "{{ application_name }}"
         state: "{{ state }}"

@@ -3,7 +3,7 @@
   become: yes
   gather_facts: false
   tasks:
-    - name: Install application tree
-      fetch:
+    - name: fetch the file from node 
+      fetch: 
         src: src_path
         dest: dest_path

@@ -3,7 +3,7 @@
   become: yes
   gather_facts: false
   tasks:
-    - name: Install application tree
+    - name: copy the files 
       copy:
         src: src_path
         dest: dest_path

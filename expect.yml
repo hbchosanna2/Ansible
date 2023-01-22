@@ -3,7 +3,7 @@
   become: yes
   gather_facts: false
   tasks:
-    - name: Case insensitive password string match
+    - name: Case insensitive password string match expect
       expect:
         command: passwd username
         responses:

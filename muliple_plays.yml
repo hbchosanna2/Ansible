@@ -3,14 +3,14 @@
   become: yes
   gather_facts: false
   tasks:
-    - name: installing wget 
+    - name: installing wget
       apt:
         name: wget
         state: present 
-    - name: download Jenkins
+    - name: download Jenkins 
       get_url:
-        url: https://updates.jenkins-ci.org/download/war/2.248/jenkins.war
-        dest: /home/spovedd
+        url: https://updates.jenkins-ci.org/download/war/2.248/jenkins.war 
+        dest: /home/spovedd 
     
 - hosts: dev
   become: yes
