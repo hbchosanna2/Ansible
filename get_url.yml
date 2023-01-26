@@ -1,10 +1,10 @@
 ---
-- hosts: dev
+- hosts: test
   become: yes
   gather_facts: false
   tasks:
     - name: Download foo.conf
       get_url:
         url: https://updates.jenkins-ci.org/download/war/2.241/jenkins.war
-        dest: /home/spovedd
+        dest: /home/
         mode: '0777'
