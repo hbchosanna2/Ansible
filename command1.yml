@@ -4,4 +4,4 @@
   gather_facts: false
   tasks:
     - name: create file name xyz
-      command: touch /tmp/devops.txt 
+      command: cat  /tmp/devops.txt 

@@ -1,9 +1,9 @@
 ---
-- hosts: dev
+- hosts: web
   become: yes
   gather_facts: false
   tasks:
     - name: Change the working directory to somedir/ before executing the command.
-      shell: somescript.sh >> somelog.txt
+      shell: welcome.sh >> somelog.txt
       args:
-        chdir: somedir/
+        chdir: /root/test/

@@ -1,9 +1,9 @@
 ---
-- hosts: dev
+- hosts: all
   become: yes
   gather_facts: false
   tasks:
     - name: copy the files 
       copy:
-        src: src_path
-        dest: dest_path
+        src: /tmp/copy.txt
+        dest: /tmp/

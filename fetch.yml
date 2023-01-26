@@ -1,9 +1,10 @@
 ---
-- hosts: dev
+- hosts: centos
   become: yes
   gather_facts: false
   tasks:
     - name: fetch the file from node 
       fetch: 
-        src: src_path
-        dest: dest_path
+        src: /tmp/test/f1.txt
+        dest: /tmp/test/
+        flat: yes

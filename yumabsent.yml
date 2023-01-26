@@ -1,0 +1,10 @@
+---
+- hosts: centos
+  become: yes
+  gather_facts: false
+  tasks:
+    - name : uninstall if httpd present
+      yum: 
+        name: httpd
+        state: absent
+
