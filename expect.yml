@@ -1,11 +1,13 @@
 ---
-- hosts: dev
+- hosts: localhost
   become: yes
   gather_facts: false
   tasks:
+    - name : create user
+      command: useradd {{ username }}
     - name: Case insensitive password string match expect
       expect:
-        command: passwd username
+        command: passwd {{ username }}
         responses:
           (?i)password: "MySekretPa$$word"
   # you don't want to show passwords in your logs
