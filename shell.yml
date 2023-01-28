@@ -1,9 +1,11 @@
 ---
-- hosts: web
+- hosts: test2
   become: yes
   gather_facts: false
   tasks:
-    - name: Change the working directory to somedir/ before executing the command.
-      shell: Welcome.sh >> somelog.txt
+    - name: create a text file in $HOME with the /bin/sh shell
+      shell: echo "Hello, World!" > $HOME/test_file.txt
+    - name: read all text files in $HOME with the /bin/bash shell
+      shell: cat < $HOME/*.txt
       args:
-        chdir: ~/home/test/
+        executable: /bin/bash

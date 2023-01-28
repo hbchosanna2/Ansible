@@ -1,7 +1,7 @@
 ---
-- hosts: web
+- hosts: test2
   become: yes
   gather_facts: false
   tasks:
     - name: create file name xyz
-      command: touch /tmp/devops.txt 
+      command: touch /tmp/welcome.sh

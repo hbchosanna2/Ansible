@@ -1,0 +1,17 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+    - name: Create new users
+      user:
+        name: '{{ item.name }}'
+        uid: '{{ item.uid }}'
+        state: absent
+
+      loop:
+        - name: rajasekhar
+          uid: 1020
+        - name: deekshith
+          uid: 1030
+        - name: henry
+          uid: 1040

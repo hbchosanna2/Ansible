@@ -1,10 +1,10 @@
 ---
-- hosts: test
+- hosts: test2
   become: yes
   gather_facts: false
   tasks:
     - name: Download foo.conf
       get_url:
-        url: https://updates.jenkins-ci.org/download/war/2.241/jenkins.war
-        dest: /home/
-        mode: '0777'
+        url: https://updates.jenkins-ci.org/download/war/2.384/jenkins.war
+        dest: /tmp/
+        mode: '0666'

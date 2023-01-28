@@ -1,10 +1,9 @@
 ---
-- hosts: test2
+- hosts: db
   become: yes
   gather_facts: false
   tasks:
     - name: install tree
-      yum:
-        name: httpd
+      apt:
+        name: tree
         state: present
-
